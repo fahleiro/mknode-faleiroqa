@@ -1,3 +1,18 @@
+# ADS
+<div id="ads-container" style="border: 1px solid black;">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+     data-ad-slot="xxxxxxxxxx"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
 # [CRIANDO DATABASE SQL SERVER COM DOCKER E LINUX - SOMENTE CLI](https://youtu.be/IL-lfihmfw4?si=Gt5DORx6nySGZyma)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IL-lfihmfw4" 
