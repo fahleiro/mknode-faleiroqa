@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "mknode": "^2.1.1"
+    "mknode": "^2.1.2"
   }
 }
