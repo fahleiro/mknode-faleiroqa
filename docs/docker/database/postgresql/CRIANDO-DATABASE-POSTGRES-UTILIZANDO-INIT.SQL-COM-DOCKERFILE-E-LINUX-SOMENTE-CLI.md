@@ -1,7 +1,4 @@
-# [CRIANDO DATABASE POSTGRES UTILIZANDO INIT.SQL COM DOCKERFILE E LINUX - SOMENTE CLI]()
-
-<iframe width="560" height="315" src="" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# [CRIANDO DATABASE POSTGRES UTILIZANDO INIT.SQL COM DOCKERFILE E LINUX - TABELAS + FUNCTIONS + TRIGGERS]()
 
 ## Objetivos
 - Criar uma imagem docker personalizada a partir da imagem oficial do POSTGRES;
@@ -19,7 +16,7 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 
 
 ## Scripts utilizados
-- Dockerfile
+- **Dockerfile**
     ```
     # Usar a imagem oficial do PostgreSQL
     FROM postgres:latest
@@ -36,7 +33,7 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
     EXPOSE 5432
     ```
 
-- Script de reinicialização do container e imagem
+- **Script de reinicialização do container e imagem**
     ```
     #!/bin/bash
 
@@ -66,4 +63,24 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
     done
 
     echo "Container postgres-db-container está pronto."
+    ```
+- **init.sql**
+    ```
+    -- Executa os scripts de criação de tabelas na ordem desejada
+    \i /docker-entrypoint-initdb.d/tables/t_user.sql
+
+    -- Executa os scripts de triggers
+    \i /docker-entrypoint-initdb.d/trg/trg_function_after_insert_t_user.sql
+
+    -- Executa o script de funções
+    \i /docker-entrypoint-initdb.d/func/func_update_t_use.sql
+    ```
+- **t_user.sql**
+    ```
+    -- Criar tabela t_user
+    CREATE TABLE IF NOT EXISTS t_user (
+        user_id SERIAL PRIMARY KEY, 
+        user_number VARCHAR(9) NOT NULL UNIQUE,
+        user_name VARCHAR(30) NOT NULL
+    );
     ```
