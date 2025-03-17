@@ -1,23 +1,29 @@
-# [CRIANDO DATABASE POSTGRES UTILIZANDO INIT.SQL COM DOCKERFILE E LINUX - TABELAS + FUNCTIONS + TRIGGERS]()
+# [CRIANDO DATABASE POSTGRES UTILIZANDO INIT.SQL PARA CRIAR TABELAS COM DOCKERFILE E LINUX]()
 
 ## Objetivos
-- Criar uma imagem docker personalizada a partir da imagem oficial do POSTGRES;
-- Iniciar o database com configurações pré-definidas pelo init.sql e arquivos de setup;
+- Criar uma imagem docker personalizada a partir da imagem oficial do POSTGRES e executá-la em um container;
+- Iniciar o database com configurações pré-definidas pelo init.sql;
 - Conectar-se à base de dados utilizando o SGBD POSTGRES a partir de outra máquina na rede;
 
 ## Comandos apresentados durante o vídeo
 - `sudo` - comando para executar comandos com permissão de super usuário: _"super user do"_
+- `ls` - listar conteúdo do diretório atual
 - `nano nome-arquivo` - comando para criação de arquivos de texto no linux (pacote pode ser adicionado via comando `sudo apt-get install nano`)
 - `docker image ls` - listar as imagens docker disponíveis localmente
 - `docker ps` - listar os containers em execução
 - `docker logs container-name` - listar os logs do container
 - `sudo chmod +x reimage.sh` - torna o script executável
-
-
+- `docker build -t postgres-db .` - builda nova imagem - onde `postgres-db` representa o nome da imagem a ser criada localmente
+- `docker run -d --name postgres-db-container -p 5432:5432 postgres-db`  
+    - `docker run` - executa um novo container.
+    - `-d` - inicia o container em modo segundo plano (_detached mode_).
+    - `--name` - define o nome do container.
+    - `-p` - mapeia a porta do host para a porta do container.
+    - `postgres-db` - nome da imagem Docker a ser utilizada.
 
 ## Scripts utilizados
 - **Dockerfile**
-    ```
+    ```Dockerfile
     # Usar a imagem oficial do PostgreSQL
     FROM postgres:latest
 
@@ -33,8 +39,8 @@
     EXPOSE 5432
     ```
 
-- **Script de reinicialização do container e imagem**
-    ```
+- **reimage.sh - Script de reinicialização do container e imagem**
+    ```bash
     #!/bin/bash
 
     # Para facilitar o debugging
@@ -64,23 +70,19 @@
 
     echo "Container postgres-db-container está pronto."
     ```
+    
 - **init.sql**
-    ```
+    ```sql
     -- Executa os scripts de criação de tabelas na ordem desejada
     \i /docker-entrypoint-initdb.d/tables/t_user.sql
-
-    -- Executa os scripts de triggers
-    \i /docker-entrypoint-initdb.d/trg/trg_function_after_insert_t_user.sql
-
-    -- Executa o script de funções
-    \i /docker-entrypoint-initdb.d/func/func_update_t_use.sql
     ```
+
 - **t_user.sql**
-    ```
+    ```sql
     -- Criar tabela t_user
     CREATE TABLE IF NOT EXISTS t_user (
         user_id SERIAL PRIMARY KEY, 
-        user_number VARCHAR(9) NOT NULL UNIQUE,
         user_name VARCHAR(30) NOT NULL
     );
     ```
+
