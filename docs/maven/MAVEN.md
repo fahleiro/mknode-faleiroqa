@@ -121,3 +121,14 @@ Esse comando irá compilar o código e executar todos os testes localizados na p
 O Maven é uma ferramenta poderosa para automação de builds e execução de testes em projetos Java. Com a configuração adequada no `pom.xml`, você pode facilmente integrar frameworks de testes como JUnit e TestNG, garantindo que seu código seja testado automaticamente durante o processo de build. A execução de testes via Maven é uma prática comum em ambientes de integração contínua (CI), proporcionando um fluxo de desenvolvimento mais ágil e eficiente.
 
 Se você tiver dúvidas ou quiser mais informações, consulte a [documentação oficial do Apache Maven](https://maven.apache.org).
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '71a1dd532287ae867038be06f4a24109',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/71a1dd532287ae867038be06f4a24109/invoke.js"></script>

@@ -73,3 +73,14 @@ E o teste será bem-sucedido se o valor da propriedade for igual a `propertyX`.
 Usar `System.getProperty()` em conjunto com o comando `mvn test -Dproperty=propertyX` é uma maneira eficiente de passar e recuperar propriedades durante a execução dos testes no Maven. Isso pode ser útil para configurar parâmetros dinâmicos, como URLs de ambientes, tokens de autenticação e outros valores que precisam ser ajustados sem alterar o código diretamente.
 
 Essa abordagem é especialmente útil em integração contínua (CI), onde valores podem ser passados dinamicamente durante o processo de build e testes.
+
+<script type="text/javascript">
+	atOptions = {
+		'key' : '71a1dd532287ae867038be06f4a24109',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/71a1dd532287ae867038be06f4a24109/invoke.js"></script>
