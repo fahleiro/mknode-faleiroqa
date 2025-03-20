@@ -22,13 +22,3 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
     - `-d` - inicia o container em modo 2 plano ( detached mode)
     - `mcr.microsoft.com/mssql/server:2022-latest` - nome da imagem docker no formato _"nome:versao"_
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '71a1dd532287ae867038be06f4a24109',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/71a1dd532287ae867038be06f4a24109/invoke.js"></script>

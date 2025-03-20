@@ -74,13 +74,3 @@ Usar `System.getProperty()` em conjunto com o comando `mvn test -Dproperty=prope
 
 Essa abordagem é especialmente útil em integração contínua (CI), onde valores podem ser passados dinamicamente durante o processo de build e testes.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '71a1dd532287ae867038be06f4a24109',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/71a1dd532287ae867038be06f4a24109/invoke.js"></script>

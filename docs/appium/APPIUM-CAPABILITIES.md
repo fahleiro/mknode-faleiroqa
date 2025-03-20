@@ -117,13 +117,3 @@ emulator-5554 device
 
 Se o status retornar como "offline", pode ser uma lentidão na inicialização do emulador ou que o mesmo não está disponível para conexão.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '71a1dd532287ae867038be06f4a24109',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/71a1dd532287ae867038be06f4a24109/invoke.js"></script>

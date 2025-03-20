@@ -79,13 +79,3 @@ Para automação em iOS e Android, você precisará instalar os seguintes plugin
 ## Alternativa ao `npm`
 Outra opção é utilizar o [Appium Desktop](https://github.com/appium/appium-desktop), disponível para Mac, Windows e Linux. Essa ferramenta oferece uma interface mais intuitiva, tornando o processo de configuração do IP e da porta mais acessível e amigável, sem perder a flexibilidade das configurações tradicionais.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '71a1dd532287ae867038be06f4a24109',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/71a1dd532287ae867038be06f4a24109/invoke.js"></script>
